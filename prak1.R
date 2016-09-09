@@ -13,8 +13,6 @@ fungsi_compute<-function(x){
 
 #fungsi tanpa pembulatan
 fungsi_true<-function(x){
-  x<-0
-  x <- cos(x)
   return (x*(sqrt(x+1)-sqrt(x)))
 }
 
