@@ -5,6 +5,9 @@ fungsi <- function(x){
 turunan <- function(x){
   return(2*x - 2)
 }
+
+z<- Deriv(x^2 - 2*x)
+  
 #deklarasi kolom dalam tabel
 ma <- matrix(data=0,nrow=1,ncol=0,byrow=FALSE,dimnames=NULL)
 mb <- matrix(data=0,nrow=1,ncol=0,byrow=FALSE,dimnames=NULL)
@@ -20,7 +23,7 @@ for (i in 1:100) {
   x1 <- xn
   mb <- matrix(c(mb,xn),nrow=1,byrow=FALSE,dimnames=NULL)
   mc <- matrix(c(mc,fungsi(xn)),nrow=1,byrow=FALSE,dimnames=NULL)
-  if(abs(xn - temp) < 0.0001){
+  if(abs(xn - x1) < 0.0001){
     break
   }
 }
